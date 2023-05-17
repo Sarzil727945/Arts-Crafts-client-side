@@ -34,7 +34,7 @@ const Header = () => {
                <Navbar bg="light" expand="lg" className=' mb-2'>
                     <Container fluid className='container'>
                          <Navbar.Brand href="#" className='fs-4'>
-                              <img src='..//../assets/react.svg' alt="" />
+                              <img className='logoStyle' src='../../../public/SA.jpg' alt="" />
                          </Navbar.Brand>
                          <Navbar.Toggle aria-controls="navbarScroll" />
                          <Navbar.Collapse id="navbarScroll">
