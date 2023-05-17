@@ -8,6 +8,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Navbar } from 'react-bootstrap';
+import logo from '../../../public/logo.png'
 
 const Header = () => {
      const { user, logOut } = useContext(AuthContext)
@@ -30,7 +31,7 @@ const Header = () => {
                <Navbar bg="light" expand="lg" className=' mb-2'>
                     <Container fluid className='container'>
                          <Navbar.Brand href="#" className='fs-4'>
-                              <img className='logoStyle' src='../../../public/logo.png' alt="" />
+                              <img className='logoStyle' src={logo} alt="" />
                          </Navbar.Brand>
                          <Navbar.Toggle aria-controls="navbarScroll" />
                          <Navbar.Collapse id="navbarScroll">
@@ -50,7 +51,7 @@ const Header = () => {
                                    }
                                    {
                                         (user?.email) &&
-                                             <ActiveLink to="/addToys">AddToy</ActiveLink>
+                                             <ActiveLink to="/addToy">AddToy</ActiveLink>
                                    }
                                    <ActiveLink to="/blog">Blog</ActiveLink>
 
