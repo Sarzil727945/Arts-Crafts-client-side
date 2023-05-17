@@ -9,12 +9,12 @@ const MyToys = () => {
      const [toysData, setToysData] = useState([])
      const navigate = useNavigate()
 
-     const url = `http://localhost:5000/addToy?email=${user.email}`;
+     const url = `http://localhost:5000/addToy?email=${user?.email}`;
      useEffect(() => {
           fetch(url)
                .then(res => res.json())
                .then(data => setToysData(data))
-     }, []);
+     }, [url]);
 
      // // server data delete start
      // const handelDelete = (id) => {
@@ -29,7 +29,7 @@ const MyToys = () => {
      //      }).then((result) => {
      //           if (result.isConfirmed) {
 
-     //                fetch(`https://mren-server-project.vercel.app/bookings/${id}`, {
+     //                fetch(`http://localhost:5000/addToy/${id}`, {
      //                     method: 'DELETE'
      //                })
      //                     .then(res => res.json())
@@ -76,15 +76,9 @@ const MyToys = () => {
 
      return (
           <div className='mt-5 pt-5 container'>
-               <h1 className='mt-5'>booking</h1>
+               <h1 className='my-5 text-center'>MyToys</h1>
 
                <section>
-                    <div className="row my-5 bg-light p-4 fw-semibold">
-                         <div className="col-lg-6">PRODUCT</div>
-                         <div className="col-lg-2">PRICE</div>
-                         <div className="col-lg-2">DATE</div>
-                         <div className="col-lg-2">STATUS</div>
-                    </div>
                     {
                          toysData.map(data => <SubMyToys
                               key={data._id}

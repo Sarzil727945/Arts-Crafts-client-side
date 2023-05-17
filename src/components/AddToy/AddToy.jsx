@@ -52,7 +52,7 @@ const AddToy = () => {
                          })
                     }
                     // server data post exit 
-                    navigate('/')
+                    navigate('/myToys')
 
                })
 
