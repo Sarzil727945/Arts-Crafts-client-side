@@ -4,9 +4,7 @@ import { TiDelete } from 'react-icons/ti'
 import Swal from 'sweetalert2';
 
 const SubMyToys = ({ data, handelDelete}) => {
-     const { photoURL, name, displayName, email, category, description, price, quantity,
-          rating, _id } = data;
-     console.log(data);
+     const { photoURL, name, displayName, email, category, description, price, quantity, rating, _id } = data;
      return (
           <div className=' container'>
                {/* <div className='row align-items-center justify-content-end mb-3'>
@@ -39,7 +37,7 @@ const SubMyToys = ({ data, handelDelete}) => {
                          <div class="col-lg-6 ps-lg-5">
                               <div class="card-body">
                                    <h4 class="card-title">Name: {name}</h4>
-                                   <h5 class="card-title">Seller: {displayName}</h5>
+                                   <h5 class="card-title">Seller Name: {displayName}</h5>
                                    <h6>Email: {email}</h6>
                                    <p>Sub-category: {category}</p>
                                    <p class="card-text">Description: {description}</p>

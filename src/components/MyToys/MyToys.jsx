@@ -16,41 +16,41 @@ const MyToys = () => {
                .then(data => setToysData(data))
      }, [url]);
 
-     // // server data delete start
-     // const handelDelete = (id) => {
-     //      Swal.fire({
-     //           title: 'Are you sure?',
-     //           text: "You won't be able to revert this!",
-     //           icon: 'warning',
-     //           showCancelButton: true,
-     //           confirmButtonColor: '#3085d6',
-     //           cancelButtonColor: '#d33',
-     //           confirmButtonText: 'Yes, delete it!'
-     //      }).then((result) => {
-     //           if (result.isConfirmed) {
+     // server data delete start
+     const handelDelete = (id) => {
+          Swal.fire({
+               title: 'Are you sure?',
+               text: "You won't be able to revert this!",
+               icon: 'warning',
+               showCancelButton: true,
+               confirmButtonColor: '#3085d6',
+               cancelButtonColor: '#d33',
+               confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+               if (result.isConfirmed) {
 
-     //                fetch(`http://localhost:5000/addToy/${id}`, {
-     //                     method: 'DELETE'
-     //                })
-     //                     .then(res => res.json())
-     //                     .then(data => {
-     //                          if (data.deletedCount > 0) {
-     //                               Swal.fire(
-     //                                    'Deleted!',
-     //                                    'Your file has been deleted.',
-     //                                    'success'
-     //                               )
+                    fetch(`http://localhost:5000/addToy/${id}`, {
+                         method: 'DELETE'
+                    })
+                         .then(res => res.json())
+                         .then(data => {
+                              if (data.deletedCount > 0) {
+                                   Swal.fire(
+                                        'Deleted!',
+                                        'Your file has been deleted.',
+                                        'success'
+                                   )
 
-     //                               const remaining = bookings.filter(booking => booking._id !== id)
-     //                               setBookings(remaining);
-     //                          }
-     //                     })
-     //           }
+                                   const remaining = toysData.filter(booking => booking._id !== id)
+                                   setToysData(remaining);
+                              }
+                         })
+               }
 
-     //      })
+          })
 
-     // }
-     // // server data delete end
+     }
+     // server data delete end
 
      // // server data update start
      // const handelUpdate = (id) => {
@@ -83,7 +83,7 @@ const MyToys = () => {
                          toysData.map(data => <SubMyToys
                               key={data._id}
                               data={data}
-                              // handelDelete={handelDelete}
+                              handelDelete={handelDelete}
                               // handelUpdate={handelUpdate}
                          ></SubMyToys>)
                     }
