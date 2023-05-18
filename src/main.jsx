@@ -17,6 +17,8 @@ import AddToy from './components/AddToy/AddToy';
 import MyToys from './components/MyToys/MyToys';
 import UpdateToy from './components/UpDateToy/UpDateToy';
 import AllToys from './components/AllToys/AllToys';
+import ViewDetails from './components/ViewDetails/ViewDetails';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,11 @@ const router = createBrowserRouter([
       {
         path:"/allToys",
         element: <AllToys></AllToys>
+      },
+      {
+        path:'/details/:id',
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
       },
       {
         path: "myToys/updateToy/:id",
