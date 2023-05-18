@@ -89,7 +89,7 @@ const Footer = () => {
                                              </div>
                                              <div className="sa">
                                                   <div className="followUs">
-                                                       <a href="https://www.instagram.com/" target='_blank'>
+                                                       <a href="#" target='_blank'>
                                                           <AiFillInstagram/>  
                                                        </a>
                                                   </div>
@@ -103,7 +103,7 @@ const Footer = () => {
                                              </div>
                                              <div className="sa ">
                                                   <div className="followUs">
-                                                       <a href="#">
+                                                       <a href="https://mail.google.com/mail/u/0/#inbox">
                                                           <SiGmail/> 
                                                        </a>
                                                   </div>
