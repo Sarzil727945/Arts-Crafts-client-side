@@ -112,6 +112,7 @@ const Login = () => {
           githubSingIn()
                .then((result) => {
                     const user = result.user;
+                    console.log(user);
                     if (user) {
                          Swal.fire({
                               title: 'Success!',
