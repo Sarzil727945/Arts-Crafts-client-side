@@ -34,7 +34,7 @@ const AddToy = () => {
           }
 
           // server data post start 
-          fetch('http://localhost:5000/Toy', {
+          fetch('https://assignment11-server-site-delta.vercel.app/Toy', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

@@ -9,7 +9,7 @@ const MyToys = () => {
      const [toysData, setToysData] = useState([])
      const navigate = useNavigate()
 
-     const url = `http://localhost:5000/Toy?email=${user?.email}`;
+     const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}`;
      useEffect(() => {
           fetch(url)
                .then(res => res.json())
@@ -30,7 +30,7 @@ const MyToys = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/Toy/${id}`, {
+                    fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${id}`, {
                          method: 'DELETE'
                     })
                          .then(res => res.json())

@@ -40,8 +40,8 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path:"/addToy",
-        element:<AddToy></AddToy>
+        path: "/addToy",
+        element: <AddToy></AddToy>
       },
       {
         path: "/myToys",
@@ -49,8 +49,8 @@ const router = createBrowserRouter([
       },
       {
         path: "myToys/updateToy/:id",
-        element:<UpdateToy></UpdateToy>,
-        loader: ({params}) => fetch(`http://localhost:5000/Toy/${params.id}`)
+        element: <UpdateToy></UpdateToy>,
+        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
       }
     ]
   },
