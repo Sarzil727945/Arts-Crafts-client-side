@@ -30,8 +30,9 @@ const Header = () => {
           <div className='fixed-top'>
                <Navbar bg="light" expand="lg" className=' mb-2'>
                     <Container fluid className='container'>
-                         <Navbar.Brand href="#" className='fs-4'>
+                         <Navbar.Brand href="#" className='fs-4 d-flex align-items-center'>
                               <img className='logoStyle' src={logo} alt="" />
+                              <h2 className='ms-3'>Arts&Crafts</h2>
                          </Navbar.Brand>
                          <Navbar.Toggle aria-controls="navbarScroll" />
                          <Navbar.Collapse id="navbarScroll">
@@ -41,17 +42,15 @@ const Header = () => {
                                    navbarScroll
                               >
                                    <ActiveLink to="/">Home</ActiveLink>
+
+                                   <ActiveLink to="/allToys">AllToys</ActiveLink>
                                    {
                                         (user?.email) &&
-                                             <ActiveLink to="/allToys">AllToys</ActiveLink>
+                                        <ActiveLink to="/myToys">MyToys</ActiveLink>
                                    }
                                    {
                                         (user?.email) &&
-                                             <ActiveLink to="/myToys">MyToys</ActiveLink>
-                                   }
-                                   {
-                                        (user?.email) &&
-                                             <ActiveLink to="/addToy">AddToy</ActiveLink>
+                                        <ActiveLink to="/addToy">AddToy</ActiveLink>
                                    }
                                    <ActiveLink to="/blog">Blog</ActiveLink>
 

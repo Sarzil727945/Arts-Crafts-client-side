@@ -62,8 +62,8 @@ const AddToy = () => {
 
      return (
           <div className='mt-5 pt-5 container '>
-               <div className=' py-5'>
-                    {/* <img className='w-100 checkOutStyle rounded' src={img} alt="" /> */}
+               <div className=' my-4'>
+                    <h1 className='text-center'>My Toys</h1>
                </div>
                <div className='checkoutForm rounded'>
                     <form className='p-lg-5 mx-lg-5' onSubmit={formHandel}>

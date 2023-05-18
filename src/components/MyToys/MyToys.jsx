@@ -6,6 +6,7 @@ import SubMyToys from './SubMyToys/SubMyToys';
 
 const MyToys = () => {
      const { user } = useContext(AuthContext);
+     const [isLoading, setIsLoading] = useState(true);
      const [toysData, setToysData] = useState([])
      const navigate = useNavigate()
 
@@ -13,7 +14,10 @@ const MyToys = () => {
      useEffect(() => {
           fetch(url)
                .then(res => res.json())
-               .then(data => setToysData(data))
+               .then(data => {
+                    setToysData(data);
+                    setIsLoading(false);
+               })
      }, [url]);
 
 
@@ -56,7 +60,14 @@ const MyToys = () => {
 
      return (
           <div className='mt-5 pt-5 container'>
-               <h1 className='my-5 text-center'>MyToys</h1>
+               <h1 className='my-4 text-center'>My Toys</h1>
+               {
+                    isLoading && <div className="text-center my-5">
+                         <div className="spinner-border" role="status">
+                              <span className="visually-hidden">Loading...</span>
+                         </div>
+                    </div>
+               }
 
                <section>
                     {
