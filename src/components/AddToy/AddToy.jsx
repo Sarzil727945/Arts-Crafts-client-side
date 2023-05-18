@@ -34,7 +34,7 @@ const AddToy = () => {
           }
 
           // server data post start 
-          fetch('http://localhost:5000/addToy', {
+          fetch('http://localhost:5000/Toy', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'
