@@ -30,34 +30,36 @@ const AllToys = () => {
           <div className=' servicePosition mt-5 pt-5 container-lg'>
 
                {/* search part start  */}
-               <div  class="container my-4 pb-3 d-flex justify-content-center">
-                    <input onChange={(e) => setSearchText(e.target.value)} id="input-field" type="text" class=" w-50 py-2 px-2 form-control mx-3" placeholder="Search.." />{" "}
-                    <button onClick={handleSearch} id="btn-search" type="submit" class="btn btn-primary">Search</button>
+               <div className="container my-4 pb-3 d-flex justify-content-center">
+                    <input onChange={(e) => setSearchText(e.target.value)} id="input-field" type="text" className=" w-50 py-2 px-2 form-control mx-3" placeholder="Search.." />{" "}
+                    <button onClick={handleSearch} id="btn-search" type="submit" className="btn btn-primary">Search</button>
                </div>
                {/* search part end  */}
 
 
-               <table class="table">
-                    <thead>
-                         <tr>
-                              <th scope="col">Seller</th>
-                              <th scope="col">Toy Name</th>
-                              <th scope="col">Sub-category</th>
-                              <th scope="col">Toy Price</th>
-                              <th scope="col">Available Quantity</th>
-                              <th scope="col"></th>
-                         </tr>
-                    </thead>
+               <div className='table-responsive'>
+                    <table className="table table-hover">
+                         <thead className='table-light'>
+                              <tr>
+                                   <th scope="col">Seller</th>
+                                   <th scope="col">Toy Name</th>
+                                   <th scope="col">Sub-category</th>
+                                   <th scope="col">Toy Price</th>
+                                   <th scope="col">Available Quantity</th>
+                                   <th scope="col"></th>
+                              </tr>
+                         </thead>
 
-                    <tbody>
-                         {
-                              arrLimit.map(data => <SubAllToys
-                                   data={data}
-                                   key={data._id}
-                              ></SubAllToys>)
-                         }
-                    </tbody>
-               </table>
+                         <tbody>
+                              {
+                                   arrLimit.map(data => <SubAllToys
+                                        data={data}
+                                        key={data._id}
+                                   ></SubAllToys>)
+                              }
+                         </tbody>
+                    </table>
+               </div>
 
                {
                     isLoading && <div className="text-center my-5">

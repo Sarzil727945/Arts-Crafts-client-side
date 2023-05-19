@@ -12,7 +12,7 @@ const SubAllToys = ({ data }) => {
                <td className='ms-5'>{quantity}</td>
                <td>
                     <Link to={`/details/${_id}`}>
-                         <button href="#" class="btn btn-danger">View Details</button>
+                         <button href="#" className="btn btn-danger">View Details</button>
                     </Link>
 
                </td>
