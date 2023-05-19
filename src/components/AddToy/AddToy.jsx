@@ -63,7 +63,7 @@ const AddToy = () => {
      return (
           <div className='mt-5 pt-5 container '>
                <div className=' my-4'>
-                    <h1 className='text-center'>My Toys</h1>
+                    <h1 className='text-center'>Add Toy</h1>
                </div>
                <div className='checkoutForm rounded'>
                     <form className='p-lg-5 mx-lg-5' onSubmit={formHandel}>

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const SubAllToys = ({ data }) => {
      const { _id, displayName, name, category, price, quantity } = data;
+     const { user } = useContext(AuthContext)
+
+     const handelToast = () => {
+          (user?.email) || Swal.fire('Please Login your Account!!')
+     }
+
 
      return (
           <tr>
@@ -13,7 +21,7 @@ const SubAllToys = ({ data }) => {
                <td><span>${price}</span></td>
                <td className='ms-5'><span>{quantity}</span></td>
                <td>
-                    <Link to={`/details/${_id}`} className='text-decoration-none fs-2 text-danger'>
+                    <Link onClick={handelToast} to={`/details/${_id}`} className='text-decoration-none fs-2 text-danger'>
                          <BsFillArrowRightCircleFill />
                     </Link>
 
