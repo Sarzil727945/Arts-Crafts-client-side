@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ReactTab.css'
+import Tab1 from './Tab1/Tab1';
+import Tab2 from './Tab2/Tab2';
+import Tab3 from './Tab3/Tab3';
 
 const ReactTab = () => {
      const [toggleState, setToggleState] = useState(1);
+     const [tabData, SetTabData] = useState([]);
+
+     useEffect(() => {
+          fetch('../../../../public/TabData.json')
+               .then(res => res.json())
+               .then(data => {
+                    SetTabData(data);
+               })
+     }, []);
+
+     const Tab1Data = tabData[0];
+     const Tab2Data = tabData[1];
+     const Tab3Data = tabData[2];
+
 
      const toggleTab = (index) => {
           setToggleState(index);
@@ -35,39 +52,43 @@ const ReactTab = () => {
                     <div
                          className={toggleState === 1 ? "content  active-content" : "content"}
                     >
-                         <h2 className=' fw-bold'>Educational and learning</h2>
-                         <hr />
-                         <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                              praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-                              vel voluptatum?
-                         </p>
+                         <h1 className='my-3 text-center'>Tab1</h1>
+                         <div className='row mb-2'>
+                              {
+                                   Tab1Data?.map(data => <Tab1
+                                        key={data.id}
+                                        data={data}
+                                   ></Tab1>)
+                              }
+                         </div>
                     </div>
 
                     <div
                          className={toggleState === 2 ? "content  active-content" : "content"}
                     >
-                         <h2 className=' fw-bold'>Language Toys</h2>
-                         <hr />
-                         <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-                              voluptatum qui adipisci.
-                         </p>
+                         <h1 className='my-3 text-center'>Tab2</h1>
+                         <div className=' row mb-2'>
+                              {
+                                   Tab2Data?.map(data => <Tab2
+                                        key={data.id}
+                                        data={data}
+                                   ></Tab2>)
+                              }
+                         </div>
                     </div>
 
                     <div
                          className={toggleState === 3 ? "content  active-content" : "content"}
                     >
-                         <h2 className=' fw-bold'>Science Toys</h2>
-                         <hr />
-                         <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-                              nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-                              Accusamus in quia odit aspernatur provident et ad vel distinctio
-                              recusandae totam quidem repudiandae omnis veritatis nostrum
-                              laboriosam architecto optio rem, dignissimos voluptatum beatae
-                              aperiam voluptatem atque. Beatae rerum dolores sunt.
-                         </p>
+                         <h1 className='my-3 text-center'>Tab3</h1>
+                         <div className='row mb-2'>
+                              {
+                                   Tab3Data?.map(data => <Tab3
+                                        key={data.id}
+                                        data={data}
+                                   ></Tab3>)
+                              }
+                         </div>
                     </div>
                </div>
           </div>

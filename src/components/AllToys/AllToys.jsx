@@ -38,7 +38,7 @@ const AllToys = () => {
 
 
                <div className='table-responsive'>
-                    <table className="table table-hover">
+                    <table className="table table-hover table-sm text-center">
                          <thead className='table-light'>
                               <tr>
                                    <th scope="col">Seller</th>

@@ -19,8 +19,8 @@ const Banner = () => {
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
 
                                              <div className='mt-3'>
-                                                  <button type="button" className="btn btn-danger me-3 mb-2">Discover More</button>
-                                                  <button type="button" className="btn text-light btn-outline-info mb-2">Latest Project</button>
+                                                  <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
+                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -37,8 +37,8 @@ const Banner = () => {
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
 
                                              <div className='mt-3'>
-                                                  <button type="button" className="btn btn-danger me-3 mb-2">Discover More</button>
-                                                  <button type="button" className="btn text-light btn-outline-info mb-2">Latest Project</button>
+                                                  <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
+                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -55,8 +55,8 @@ const Banner = () => {
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
 
                                              <div className='mt-3'>
-                                                  <button type="button" className="btn btn-danger me-3 mb-2">Discover More</button>
-                                                  <button type="button" className="btn text-light btn-outline-info mb-2">Latest Project</button>
+                                                  <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
+                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -73,8 +73,8 @@ const Banner = () => {
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
 
                                              <div className='mt-3'>
-                                                  <button type="button" className="btn btn-danger me-3 mb-2">Discover More</button>
-                                                  <button type="button" className="btn text-light btn-outline-info mb-2">Latest Project</button>
+                                                  <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
+                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -91,8 +91,8 @@ const Banner = () => {
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
 
                                              <div className='mt-3'>
-                                                  <button type="button" className="btn btn-danger me-3 mb-2">Discover More</button>
-                                                  <button type="button" className="btn text-light btn-outline-info mb-2">Latest Project</button>
+                                                  <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
+                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
