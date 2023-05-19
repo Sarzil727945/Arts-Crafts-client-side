@@ -17,10 +17,9 @@ const Banner = () => {
                                                   <h2 className=' display-4 fw-semibold mb-3 pt-5'>The World of Arts Crafts Toys</h2>
                                              </div>
                                              <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
-
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-info mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -38,7 +37,7 @@ const Banner = () => {
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-info  mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -56,7 +55,7 @@ const Banner = () => {
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-info  mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -74,7 +73,7 @@ const Banner = () => {
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-info  mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>
@@ -92,7 +91,7 @@ const Banner = () => {
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-primary mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-info mb-2">Crafts Project</button>
                                              </div>
                                         </div>
                                    </div>

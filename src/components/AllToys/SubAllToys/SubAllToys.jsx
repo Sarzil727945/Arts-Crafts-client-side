@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const SubAllToys = ({ data }) => {
-     const {_id, displayName, name, category, price, quantity } = data;
+     const { _id, displayName, name, category, price, quantity } = data;
+
      return (
           <tr>
-               <th scope="row">{displayName}</th>
-               <td>{name}</td>
-               <td>{category}</td>
-               <td>${price}</td>
-               <td className='ms-5'>{quantity}</td>
+               <td scope="row"><span>{displayName}</span></td>
+               <td><span>{name}</span></td>
+               <td><span>{category}</span></td>
+               <td><span>${price}</span></td>
+               <td className='ms-5'><span>{quantity}</span></td>
                <td>
-                    <Link to={`/details/${_id}`}>
-                         <button href="#" className="btn btn-danger">View Details</button>
+                    <Link to={`/details/${_id}`} className='text-decoration-none fs-2 text-danger'>
+                         <BsFillArrowRightCircleFill />
                     </Link>
 
                </td>

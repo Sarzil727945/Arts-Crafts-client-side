@@ -77,18 +77,25 @@ const AddToy = () => {
                          </div>
                          <div className=' row px-4 pt-4'>
                               <div className="mb-2">
-                                   <input type="text" name='category' className="form-control py-2" placeholder="Sub-category" aria-label="category" required />
+                                   <select class="form-select py-2" name='category' aria-label="Default select example" required>
+                                        <option selected>Sculpting and Modeling</option>
+                                        <option value="Jewelry Making">Jewelry Making</option>
+                                        <option value="Drawing and Coloring">Drawing and Coloring</option>
+                                        <option value="Paper Crafts">Paper Crafts</option>
+                                        <option value="DIY Science and Art">DIY Science and Art</option>
+                                   </select>
+
                               </div>
                          </div>
                          <div className="row px-4 py-4">
                               <div className="col-lg mb-2">
-                                   <input type="number" name='price' className="form-control py-2" placeholder="Price" aria-label="Price" required />
+                                   <input type="text" name='price' className="form-control py-2" placeholder="Price" aria-label="Price" required />
                               </div>
                               <div className="col-lg mb-2">
-                                   <input type="number" name='rating' className="form-control py-2" placeholder="Rating" aria-label="Rating" required />
+                                   <input type="text" name='rating' className="form-control py-2" placeholder="Rating" aria-label="Rating" required />
                               </div>
                               <div className="col-lg">
-                                   <input type="number" name='quantity' className="form-control py-2" placeholder="Available quantity" aria-label="Available quantity" required />
+                                   <input type="text" name='quantity' className="form-control py-2" placeholder="Available quantity" aria-label="Available quantity" required />
                               </div>
                          </div>
                          <div className="mb-3 px-4 pb-3">

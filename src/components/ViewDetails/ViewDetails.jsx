@@ -1,4 +1,5 @@
 import React from 'react';
+import './ViewDetails.css'
 import { useLoaderData } from 'react-router-dom';
 
 const ViewDetails = () => {
@@ -8,7 +9,7 @@ const ViewDetails = () => {
           <div className='mt-5 pt-5'>
                <h1 className=' text-center my-3 pb-3'>ViewDetails</h1>
                <div className="card col-lg-5 mx-auto">
-                    <img src={photoURL} className="card-img-top p-3 rounded" alt="..." />
+                    <img src={photoURL} className="card-img-top p-3 rounded viewImg" alt="..." />
                     <div className="card-body">
                          <h4 className="card-title">Toy name: {name}</h4>
                          <h5 className="card-title">Seller name: {displayName}</h5>

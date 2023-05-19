@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SubAllToys from './SubAllToys/SubAllToys';
+import "./ALLToys.css"
 
 const AllToys = () => {
      const [jsonData, setJsonData] = useState([]);
@@ -32,21 +33,21 @@ const AllToys = () => {
                {/* search part start  */}
                <div className="container my-4 pb-3 d-flex justify-content-center">
                     <input onChange={(e) => setSearchText(e.target.value)} id="input-field" type="text" className=" w-50 py-2 px-2 form-control mx-3" placeholder="Search.." />{" "}
-                    <button onClick={handleSearch} id="btn-search" type="submit" className="btn btn-primary">Search</button>
+                    <button onClick={handleSearch} id="btn-search" type="submit" className="btn btn-info">Search</button>
                </div>
                {/* search part end  */}
 
 
                <div className='table-responsive'>
-                    <table className="table table-hover table-sm text-center">
+                    <table className="table text-center table-striped">
                          <thead className='table-light'>
                               <tr>
-                                   <th scope="col">Seller</th>
+                                   <th scope="col">Seller Name</th>
                                    <th scope="col">Toy Name</th>
                                    <th scope="col">Sub-category</th>
                                    <th scope="col">Toy Price</th>
                                    <th scope="col">Available Quantity</th>
-                                   <th scope="col"></th>
+                                   <th scope="col">View</th>
                               </tr>
                          </thead>
 

@@ -49,56 +49,62 @@ const UpdateToy = () => {
                          })
                     }
 
-          // server data post exit 
-          navigate('/myToys')
+                    // server data post exit 
+                    navigate('/myToys')
 
-     })
+               })
 
           form.reset();
 
-}
+     }
 
-return (
-     <div className='mt-5 pt-5 container '>
-          <div className=' my-4 text-center'>
-              <h1>UpData Toy</h1>
+     return (
+          <div className='mt-5 pt-5 container '>
+               <div className=' my-4 text-center'>
+                    <h1>UpData Toy</h1>
+               </div>
+               <div className='checkoutForm rounded'>
+                    <form className='p-lg-5 mx-lg-5' onSubmit={formHandel}>
+                         <div className="row px-4 pt-4">
+                              <div className="col-lg mb-2">
+                                   <input type="text" name='name' defaultValue={name} className="form-control py-2" placeholder="Name" aria-label="name" required />
+                              </div>
+                              <div className="col-lg">
+                                   <input type="text" name='photoURL' defaultValue={photoURL} className="form-control py-2" placeholder="Picture URL" aria-label="Picture URL" required />
+                              </div>
+                         </div>
+                         <div className=' row px-4 pt-4'>
+                              <div className="mb-2">
+                                   <select class="form-select py-2" name='category' aria-label="Default select example" defaultValue={category} required>
+                                        <option selected>Sculpting and Modeling</option>
+                                        <option value="Jewelry Making">Jewelry Making</option>
+                                        <option value="Drawing and Coloring">Drawing and Coloring</option>
+                                        <option value="Paper Crafts">Paper Crafts</option>
+                                        <option value="DIY Science and Art">DIY Science and Art</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <div className="row px-4 py-4">
+                              <div className="col-lg mb-2">
+                                   <input type="text" name='price' defaultValue={price} className="form-control py-2" placeholder="Price" aria-label="Price" required />
+                              </div>
+                              <div className="col-lg mb-2">
+                                   <input type="text" name='rating' defaultValue={rating} className="form-control py-2" placeholder="Rating" aria-label="Rating" required />
+                              </div>
+                              <div className="col-lg">
+                                   <input type="text" name='quantity' defaultValue={quantity} className="form-control py-2" placeholder="Available quantity" aria-label="Available quantity" required />
+                              </div>
+                         </div>
+                         <div className="mb-3 px-4 pb-3">
+                              <textarea name='description' defaultValue={description} className="form-control py-2" id="validationTextarea" placeholder="Detail description" required rows="5"></textarea>
+                         </div>
+                         <div className='px-4'>
+                              <button type="submit" className="btn btn-danger w-100 py-2 fw-semibold">UpData Toy</button>
+                         </div>
+                    </form>
+               </div>
           </div>
-          <div className='checkoutForm rounded'>
-               <form className='p-lg-5 mx-lg-5' onSubmit={formHandel}>
-                    <div className="row px-4 pt-4">
-                         <div className="col-lg mb-2">
-                              <input type="text" name='name' defaultValue={name} className="form-control py-2" placeholder="Name" aria-label="name" required />
-                         </div>
-                         <div className="col-lg">
-                              <input type="text" name='photoURL' defaultValue={photoURL} className="form-control py-2" placeholder="Picture URL" aria-label="Picture URL" required />
-                         </div>
-                    </div>
-                    <div className=' row px-4 pt-4'>
-                         <div className="mb-2">
-                              <input type="text" name='category' defaultValue={category} className="form-control py-2" placeholder="Sub-category" aria-label="category" required />
-                         </div>
-                    </div>
-                    <div className="row px-4 py-4">
-                         <div className="col-lg mb-2">
-                              <input type="number" name='price' defaultValue={price} className="form-control py-2" placeholder="Price" aria-label="Price" required />
-                         </div>
-                         <div className="col-lg mb-2">
-                              <input type="number" name='rating' defaultValue={rating} className="form-control py-2" placeholder="Rating" aria-label="Rating" required />
-                         </div>
-                         <div className="col-lg">
-                              <input type="number" name='quantity' defaultValue={quantity} className="form-control py-2" placeholder="Available quantity" aria-label="Available quantity" required />
-                         </div>
-                    </div>
-                    <div className="mb-3 px-4 pb-3">
-                         <textarea name='description' defaultValue={description} className="form-control py-2" id="validationTextarea" placeholder="Detail description" required rows="5"></textarea>
-                    </div>
-                    <div className='px-4'>
-                         <button type="submit" className="btn btn-danger w-100 py-2 fw-semibold">UpData Toy</button>
-                    </div>
-               </form>
-          </div>
-     </div>
-);
+     );
 };
 
 export default UpdateToy;

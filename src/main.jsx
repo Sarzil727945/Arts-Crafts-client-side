@@ -19,6 +19,7 @@ import UpdateToy from './components/UpDateToy/UpDateToy';
 import AllToys from './components/AllToys/AllToys';
 import ViewDetails from './components/ViewDetails/ViewDetails';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import TabDetails from './components/Home/ReactTab/TabDetails/TabDetails';
 
 const router = createBrowserRouter([
   {
@@ -51,13 +52,18 @@ const router = createBrowserRouter([
         element: <MyToys></MyToys>
       },
       {
-        path:"/allToys",
+        path: "/allToys",
         element: <AllToys></AllToys>
       },
       {
-        path:'/details/:id',
+        path: '/tab1Details/:id',
+        element: <PrivateRoute><TabDetails></TabDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
+      },
+      {
+        path: '/details/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
       },
       {
         path: "myToys/updateToy/:id",
