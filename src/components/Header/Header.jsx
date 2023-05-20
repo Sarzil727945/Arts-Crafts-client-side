@@ -8,7 +8,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Navbar } from 'react-bootstrap';
-import logo from '../../../public/logo.png'
+import logo from '../../assets/logo.png'
 
 const Header = () => {
      const { user, logOut } = useContext(AuthContext)

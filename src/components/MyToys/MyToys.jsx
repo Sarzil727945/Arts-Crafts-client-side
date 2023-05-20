@@ -11,7 +11,7 @@ const MyToys = () => {
      const [priceSort, setPriceSort] = useState('');
      const navigate = useNavigate()
 
-     const url = `http://localhost:5000/Toy?email=${user?.email}&sort=${priceSort}`;
+     const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
      useEffect(() => {
           fetch(url)
                .then(res => res.json())
