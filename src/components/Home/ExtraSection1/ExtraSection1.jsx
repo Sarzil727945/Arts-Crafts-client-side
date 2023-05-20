@@ -4,7 +4,7 @@ import './ExtraSection1.css'
 const ExtraSection1 = () => {
      return (
           <div>
-               <h1 className=' text-center my-5'>Extra Section1 </h1>
+               <h1 className=' text-center my-5'>Top Arts Crafts</h1>
                <div className=' container'>
                     <div className="row align-items-center">
                          <div className="col-lg-5">

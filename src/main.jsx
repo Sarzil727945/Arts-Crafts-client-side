@@ -20,6 +20,7 @@ import AllToys from './components/AllToys/AllToys';
 import ViewDetails from './components/ViewDetails/ViewDetails';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import TabDetails from './components/Home/ReactTab/TabDetails/TabDetails';
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
 
 const router = createBrowserRouter([
   {
