@@ -89,7 +89,7 @@ const AddToy = () => {
                          </div>
                          <div className="row px-4 py-4">
                               <div className="col-lg mb-2">
-                                   <input type="text" name='price' className="form-control py-2" placeholder="Price" aria-label="Price" required />
+                                   <input type="number" name='price' className="form-control py-2" placeholder="Price" aria-label="Price" required />
                               </div>
                               <div className="col-lg mb-2">
                                    <input type="text" name='rating' className="form-control py-2" placeholder="Rating" aria-label="Rating" required />
