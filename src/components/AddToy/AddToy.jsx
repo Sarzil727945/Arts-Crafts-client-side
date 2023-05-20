@@ -77,12 +77,10 @@ const AddToy = () => {
                          </div>
                          <div className=' row px-4 pt-4'>
                               <div className="mb-2">
-                                   <select class="form-select py-2" name='category' aria-label="Default select example" required>
-                                        <option selected>Sculpting and Modeling</option>
+                                   <select className="form-select py-2" name='category' aria-label="Default select example" required>
+                                        <option >Sculpting and Modeling</option>
                                         <option value="Jewelry Making">Jewelry Making</option>
                                         <option value="Drawing and Coloring">Drawing and Coloring</option>
-                                        <option value="Paper Crafts">Paper Crafts</option>
-                                        <option value="DIY Science and Art">DIY Science and Art</option>
                                    </select>
 
                               </div>

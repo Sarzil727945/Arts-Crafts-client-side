@@ -88,7 +88,7 @@ const ReactTab = () => {
                          <div className=' row mb-2'>
                               {
                                    tab2Data?.map(data => <Tab2
-                                        key={data.id}
+                                        key={data._id}
                                         data={data}
                                    ></Tab2>)
                               }
@@ -109,7 +109,7 @@ const ReactTab = () => {
                          <div className='row mb-2'>
                               {
                                    tab3Data?.map(data => <Tab3
-                                        key={data.id}
+                                        key={data._id}
                                         data={data}
                                    ></Tab3>)
                               }

@@ -12,16 +12,16 @@ const Tab2 = ({ data }) => {
      }
      return (
           <div className='col-lg-4 mb-3'>
-               <div class="card p-2">
-                    <img src={photoURL} class="card-img-top tabImg" alt="..." />
-                    <div class="card-body">
-                         <h5 class="card-title">{name}</h5>
+               <div className="card p-2">
+                    <img src={photoURL} className="card-img-top tabImg" alt="..." />
+                    <div className="card-body">
+                         <h5 className="card-title">{name}</h5>
                          <div className=' d-flex justify-content-between'>
-                              <p class="card-text">Price: ${price}</p>
-                              <p class="card-text">Rating: {rating}</p>
+                              <p className="card-text">Price: ${price}</p>
+                              <p className="card-text">Rating: {rating}</p>
                          </div>
                          <Link to={`/tab1Details/${_id}`}>
-                              <button onClick={handelToast} href="#" class="btn btn-primary">View Details</button>
+                              <button onClick={handelToast} href="#" className="btn btn-primary">View Details</button>
                          </Link>
                     </div>
                </div>

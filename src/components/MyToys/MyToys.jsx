@@ -7,10 +7,11 @@ import SubMyToys from './SubMyToys/SubMyToys';
 const MyToys = () => {
      const { user } = useContext(AuthContext);
      const [isLoading, setIsLoading] = useState(true);
-     const [toysData, setToysData] = useState([])
+     const [toysData, setToysData] = useState([]);
+     const [priceSort, setPriceSort] = useState('');
      const navigate = useNavigate()
 
-     const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}`;
+     const url = `http://localhost:5000/Toy?email=${user?.email}&sort=${priceSort}`;
      useEffect(() => {
           fetch(url)
                .then(res => res.json())
@@ -18,7 +19,7 @@ const MyToys = () => {
                     setToysData(data);
                     setIsLoading(false);
                })
-     }, [url]);
+     }, [priceSort, url]);
 
 
      // server data delete start
@@ -61,22 +62,47 @@ const MyToys = () => {
      return (
           <div className='mt-5 pt-5 container'>
                <h1 className='my-4 text-center'>My Toys</h1>
-               {
-                    isLoading && <div className="text-center my-5">
-                         <div className="spinner-border" role="status">
-                              <span className="visually-hidden">Loading...</span>
-                         </div>
-                    </div>
-               }
+               <div className=" my-3 pb-3">
+                    <button onClick={() => setPriceSort(1)} type="button" className="btn btn-success me-2">Ascending Sort</button>
+                    <button onClick={() => setPriceSort(-1)} type="button" className="btn btn-danger">Descending Sort</button>
+               </div>
 
                <section>
+                    <div className='table-responsive'>
+                         <table className="table text-center table-striped">
+                              <thead className='table-light'>
+                                   <tr>
+                                        <th scope="col">SELLER NAME</th>
+                                        <th scope="col">TOY NAME</th>
+                                        <th scope="col">PICTURE</th>
+                                        <th scope="col">CATEGORY</th>
+                                        <th scope="col">PRICE</th>
+                                        <th scope="col">RATING</th>
+                                        <th scope="col">QUANTITY</th>
+                                        <th scope="col">UPDATE</th>
+                                        <th scope="col">DELETE</th>
+                                   </tr>
+                              </thead>
+
+                              <tbody>
+                                   {
+                                        toysData.map(data => <SubMyToys
+                                             key={data._id}
+                                             data={data}
+                                             handelDelete={handelDelete}
+                                        ></SubMyToys>)
+                                   }
+                              </tbody>
+                         </table>
+                    </div>
                     {
-                         toysData.map(data => <SubMyToys
-                              key={data._id}
-                              data={data}
-                              handelDelete={handelDelete}
-                         ></SubMyToys>)
+                         isLoading && <div className="text-center my-5">
+                              <div className="spinner-border" role="status">
+                                   <span className="visually-hidden">Loading...</span>
+                              </div>
+                         </div>
                     }
+
                </section>
           </div>
      );
