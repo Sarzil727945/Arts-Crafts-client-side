@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import SubAllToys from './SubAllToys/SubAllToys';
 import "./ALLToys.css"
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
+     useTitle('AllToys')
      const [jsonData, setJsonData] = useState([]);
      const [isLoading, setIsLoading] = useState(true);
      const [searchText, setSearchText] = useState('')

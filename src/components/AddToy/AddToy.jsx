@@ -3,8 +3,10 @@ import './AddToy.css'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const AddToy = () => {
+     useTitle('AddToy')
 
      const navigate = useNavigate();
      const { user } = useContext(AuthContext)

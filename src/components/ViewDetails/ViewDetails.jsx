@@ -1,13 +1,15 @@
 import React from 'react';
 import './ViewDetails.css'
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ViewDetails = () => {
+     useTitle('Toy Details')
      const ViewData = useLoaderData();
      const { photoURL, name, displayName, email, description, price,  rating, quantity} = ViewData;
      return (
           <div className='mt-5 pt-5'>
-               <h1 className=' text-center my-3 pb-3'>ViewDetails</h1>
+               <h1 className=' text-center my-3 pb-3'>Toy Details</h1>
                <div className="card col-lg-5 mx-auto">
                     <img src={photoURL} className="card-img-top p-3 rounded viewImg" alt="..." />
                     <div className="card-body">

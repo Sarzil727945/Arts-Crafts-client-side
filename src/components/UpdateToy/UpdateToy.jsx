@@ -3,8 +3,10 @@ import './UpdateToy.css'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateToy = () => {
+     useTitle('UpdateToy')
      const navigate = useNavigate();
      const { user } = useContext(AuthContext)
      const toyData = useLoaderData();
@@ -43,7 +45,7 @@ const UpdateToy = () => {
                     if (data.modifiedCount) {
                          Swal.fire({
                               title: 'Success!',
-                              text: 'Coffee update Successfully',
+                              text: 'Toy update Successfully',
                               icon: 'success',
                               confirmButtonText: 'Ok'
                          })

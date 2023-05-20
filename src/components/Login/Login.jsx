@@ -6,8 +6,11 @@ import { ImGoogle2 } from 'react-icons/im'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+     useTitle('Login')
+
      const [error, setError] = useState('')
      const [success, setSuccess] = useState('')
      const [passwordShown, setPasswordShown] = useState(false);
@@ -44,11 +47,6 @@ const Login = () => {
           signIn(email, password)
                .then((userCredential) => {
                     const currentUser = userCredential.user;
-
-                    // if (!currentUser.emailVerified) {
-                    //      alert('not email')
-                    //      return
-                    // }
 
                     if (currentUser) {
                          Swal.fire({

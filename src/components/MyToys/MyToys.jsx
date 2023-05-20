@@ -3,8 +3,11 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import SubMyToys from './SubMyToys/SubMyToys';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
+     useTitle('MyToys')
+
      const { user } = useContext(AuthContext);
      const [isLoading, setIsLoading] = useState(true);
      const [toysData, setToysData] = useState([]);

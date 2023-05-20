@@ -12,7 +12,7 @@ const SubMyToys = ({ data, handelDelete }) => {
                <td><img className='myImg' src={photoURL} alt="" /></td>
                <td><span>{category}</span></td>
                <td><span>${price}</span></td>
-               <td><span>${rating}</span></td>
+               <td><span>{rating}</span></td>
                <td className='ms-5'><span>{quantity}</span></td>
                <td>
                     <Link to={`updateToy/${_id}`}>
