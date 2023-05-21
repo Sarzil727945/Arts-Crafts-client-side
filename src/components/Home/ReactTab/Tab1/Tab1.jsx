@@ -17,10 +17,10 @@ const Tab1 = ({ data }) => {
                <div className="card p-2">
                     <img src={photoURL} className="card-img-top tabImg" alt="..." />
                     <div className="card-body">
-                         <h5 className="card-title">{name}</h5>
+                         <h5 className="card-title"><b>Name:</b> {name}</h5>
                          <div className=' d-flex justify-content-between'>
-                              <p className="card-text">Price: ${price}</p>
-                              <p className="card-text">Rating: {rating}</p>
+                              <p className="card-text"><b>Price:</b> {price} Tk</p>
+                              <p className="card-text"><b>Rating:</b> {rating}</p>
                          </div>
 
 

@@ -12,7 +12,7 @@ const ExtraSection2 = () => {
                                    <p><b className="text-primary">World</b></p>
                                    <h2>Featured post</h2>
                                    <p className="text-secondary">Nov 12</p>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisic, elit. Corrupti, mollitia, reprehenderit. Quae, maiores soluta velit.</p>
+                                   <p>Moreover, textiles can be enhanced with various techniques and embellishments, printing and embroidery to different textile traditions around the world.</p>
                                    <p className="text-primary">Contirune reading</p>
 
                               </div>
@@ -27,7 +27,7 @@ const ExtraSection2 = () => {
                                    <p><b className="text-success">Desing</b></p>
                                    <h2>Post title</h2>
                                    <p className="text-secondary">Nov 11</p>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisic, elit. Corrupti, mollitia, reprehenderit. Quae, maiores soluta velit.</p>
+                                   <p>The choice of materials in textile arts and crafts greatly influences the final outcome of a piece. including cotton, silk, linen, wool, and synthetic materials like polyester and nylon.</p>
                                    <p className="text-primary">Contirune reading</p>
 
                               </div>

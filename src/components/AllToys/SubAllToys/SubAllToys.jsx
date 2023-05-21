@@ -18,7 +18,7 @@ const SubAllToys = ({ data }) => {
                <td scope="row"><span>{displayName}</span></td>
                <td><span>{name}</span></td>
                <td><span>{category}</span></td>
-               <td><span>${price}</span></td>
+               <td><span>{price} Tk</span></td>
                <td className='ms-5'><span>{quantity}</span></td>
                <td>
                     <Link onClick={handelToast} to={`/details/${_id}`} className='text-decoration-none fs-2 text-danger'>

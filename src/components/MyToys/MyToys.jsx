@@ -11,7 +11,7 @@ const MyToys = () => {
      const { user } = useContext(AuthContext);
      const [isLoading, setIsLoading] = useState(true);
      const [toysData, setToysData] = useState([]);
-     const [priceSort, setPriceSort] = useState('');
+     const [priceSort, setPriceSort] = useState("");
      const navigate = useNavigate()
 
      const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
