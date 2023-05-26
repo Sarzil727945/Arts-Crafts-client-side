@@ -1,6 +1,6 @@
 # b7a11-toy-marketplace-client-side-Sarzil727945
 ### This is My Assignment 11
-### LiveSite Link: https://lucent-speculoos-42864e.netlify.app/
+### LiveSite Link: https://6470595d8bc55e5b5c3ed7ed--eloquent-granita-d6465f.netlify.app/
 ### This Assignment Home page  slider, Gallery,  React-tabs click this data, Extra 2 section, .
 ### AllToys page this page allToys data show.
 ### MyToys page this page my added data show and my data and delete option added
