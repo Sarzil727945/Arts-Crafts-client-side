@@ -14,16 +14,32 @@ const MyToys = () => {
      const [priceSort, setPriceSort] = useState("");
      const navigate = useNavigate()
 
+     // const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
+     // useEffect(() => {
+     //      fetch(url)
+     //           .then(res => res.json())
+     //           .then(data => {
+     //                setToysData(data);
+     //                setIsLoading(false);
+     //           })
+     // }, [priceSort, url]);
+
+     // jwt added server data get start
      const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
      useEffect(() => {
-          fetch(url)
+          fetch(url, {
+               method: 'GET',
+               headers: {
+                    authorization: `Bearer ${localStorage.getItem('arts-access-token')}`
+               }
+          })
                .then(res => res.json())
                .then(data => {
                     setToysData(data);
                     setIsLoading(false);
                })
      }, [priceSort, url]);
-
+     // jwt added server data get exit
 
      // server data delete start
      const handelDelete = (id) => {

@@ -24,7 +24,6 @@ const Login = () => {
      const from = location.state?.from?.pathname || '/';
      const emailRef = useRef();
 
-     console.log(from);
      // passwordShown function start
      const [passwordIcon, setPasswordIcon] = useState(false)
 
