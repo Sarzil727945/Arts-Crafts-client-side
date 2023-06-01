@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
                          email: currentUser.email
                     }
 
-                    fetch('https://mren-server-project.vercel.app/jwt', {
+                    fetch('https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/jwt', {
                          method: 'POST',
                          headers: {
                               'content-type': 'application/json'

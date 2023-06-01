@@ -14,7 +14,8 @@ const MyToys = () => {
      const [priceSort, setPriceSort] = useState("");
      const navigate = useNavigate()
 
-     // const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
+     // // server data get start 
+     // const url = `https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
      // useEffect(() => {
      //      fetch(url)
      //           .then(res => res.json())
@@ -23,9 +24,10 @@ const MyToys = () => {
      //                setIsLoading(false);
      //           })
      // }, [priceSort, url]);
+     // // server data get exit 
 
      // jwt added server data get start
-     const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
+     const url = `https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
      useEffect(() => {
           fetch(url, {
                method: 'GET',
@@ -54,7 +56,7 @@ const MyToys = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${id}`, {
+                    fetch(`https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy/${id}`, {
                          method: 'DELETE'
                     })
                          .then(res => res.json())
