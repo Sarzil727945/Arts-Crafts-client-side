@@ -12,7 +12,7 @@ const ReactTab = () => {
      const [tab3Data, setTab3Data] = useState([])
 
      useEffect(() => {
-          fetch('https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy')
+          fetch('http://localhost:5000/Toy')
                .then(res => res.json())
                .then(data => {
                     const Tab1Data = data.filter(data => data.category === "Sculpting and Modeling")

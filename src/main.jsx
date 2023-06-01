@@ -59,17 +59,17 @@ const router = createBrowserRouter([
       {
         path: '/tab1Details/:id',
         element: <PrivateRoute><TabDetails></TabDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/Toy/${params.id}`)
       },
       {
         path: '/details/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/Toy/${params.id}`)
       },
       {
         path: "myToys/updateToy/:id",
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-a0jua8uoj-sarzil727945.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/Toy/${params.id}`)
       }
     ]
   },
