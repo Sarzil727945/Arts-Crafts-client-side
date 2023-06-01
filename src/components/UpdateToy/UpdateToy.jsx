@@ -33,7 +33,7 @@ const UpdateToy = () => {
           }
 
           // server data post start 
-          fetch(`http://localhost:5000/Toy/${_id}`, {
+          fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${_id}`, {
                method: 'PUT',
                headers: {
                     'content-type': 'application/json'

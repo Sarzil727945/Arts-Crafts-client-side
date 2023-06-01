@@ -10,7 +10,7 @@ const AllToys = () => {
      const [searchText, setSearchText] = useState('')
 
      useEffect(() => {
-          fetch('http://localhost:5000/Toy')
+          fetch('https://assignment11-server-site-delta.vercel.app/Toy')
                .then(res => res.json())
                .then(data => {
                     setJsonData(data);
@@ -21,7 +21,7 @@ const AllToys = () => {
 
      // search server json start 
      const handleSearch = () => {
-          fetch(`http://localhost:5000/ToySearchText/${searchText}`)
+          fetch(`https://assignment11-server-site-delta.vercel.app/ToySearchText/${searchText}`)
                .then((res) => res.json())
                .then((data) => {
                     setJsonData(data);
