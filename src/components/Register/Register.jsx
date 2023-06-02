@@ -61,19 +61,35 @@ const Register = () => {
                .then((userCredential) => {
                     const currentUser = userCredential.user;
                     setSuccess('Create user account successFull')
-                    if (currentUser) {
-                         Swal.fire({
-                              title: 'Success!',
-                              text: 'Register Success !!',
-                              icon: 'success',
-                              confirmButtonText: 'Ok'
-                         })
-                    }
-                    form.reset()
-                    // Verification(currentUser)
-                    navigate('/')
-                    setEmail('')
-                    upDataUser(currentUser, name, photoUrl)
+
+                    // user post data page start 
+                    const saveUser = {name: name, email: email, password: password}
+                    fetch('http://localhost:5000/users',{
+                         method: 'POST',
+                         headers: {
+                              'content-type':'application/json'
+                         },
+                         body: JSON.stringify(saveUser)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                         if (data.insertedId) {
+                              if (currentUser) {
+                                   Swal.fire({
+                                        title: 'Success!',
+                                        text: 'Register Success !!',
+                                        icon: 'success',
+                                        confirmButtonText: 'Ok'
+                                   })
+                              }
+                              form.reset()
+                              // Verification(currentUser)
+                              navigate('/')
+                              setEmail('') 
+                              upDataUser(currentUser, name, photoUrl)
+                         }
+                    })
+                    // user post data page end
                })
                .catch((error) => {
                     const errorMessage = error.message;
