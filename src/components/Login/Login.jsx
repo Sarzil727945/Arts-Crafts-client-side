@@ -87,16 +87,34 @@ const Login = () => {
                .then((result) => {
                     const user = result.user;
 
-                    if (user) {
-                         Swal.fire({
-                              title: 'Success!',
-                              text: 'Login Success !!',
-                              icon: 'success',
-                              confirmButtonText: 'Ok'
-                         })
-                    }
-                    setUser(user)
-                    navigate(from, { replace: true })
+                    // user information post data page start 
+                     const saveUser = {name: user.displayName, email: user.email}
+                    fetch('https://assignment11-server-site-delta.vercel.app/users',{
+                         method: 'POST',
+                         headers: {
+                              'content-type':'application/json'
+                         },
+                         body: JSON.stringify(saveUser)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                         if (data.insertedId) {
+                            
+                              // Verification(currentUser)
+                         }
+                         if (user) {
+                              Swal.fire({
+                                   title: 'Success!',
+                                   text: 'Login Success !!',
+                                   icon: 'success',
+                                   confirmButtonText: 'Ok'
+                              })
+                         }
+                         setUser(user)
+                         navigate(from, { replace: true })
+                    })
+                    // user information data post data page end
+
                }).catch((error) => {
                     const errorMessage = error.message;
                     setError(errorMessage)

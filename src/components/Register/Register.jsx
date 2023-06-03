@@ -62,7 +62,7 @@ const Register = () => {
                     const currentUser = userCredential.user;
                     setSuccess('Create user account successFull')
 
-                    // user post data page start 
+                    // user information post data page start 
                     const saveUser = {name: name, email: email, password: password}
                     fetch('https://assignment11-server-site-delta.vercel.app/users',{
                          method: 'POST',
@@ -89,7 +89,7 @@ const Register = () => {
                               upDataUser(currentUser, name, photoUrl)
                          }
                     })
-                    // user post data page end
+                    // user information post data page end
                })
                .catch((error) => {
                     const errorMessage = error.message;
